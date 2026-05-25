@@ -735,7 +735,7 @@
 
   /* ─── WHY ME ─── */
   #why {
-    padding: 8rem 0;
+    padding: 8rem 0 12rem;
   }
   .why-grid {
     display: grid;
@@ -772,7 +772,9 @@
   .why-visual {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.75rem;
+    padding-right: 3.5rem;
+    margin-bottom: 2rem;
   }
   .why-photo {
     border-radius: 16px;
@@ -780,6 +782,7 @@
     aspect-ratio: 3/4;
   }
   .why-photo:first-child { margin-top: 2rem; }
+  .why-photo:nth-child(2) { margin-bottom: 2rem; }
   .why-photo img {
     width: 100%;
     height: 100%;
