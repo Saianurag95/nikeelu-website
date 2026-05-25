@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikeelu Gunda ? Videos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --gold:#c9a96e; --orange:#f5a208; --black:#080808; --dark:#111; --dark2:#171819; --text:#e8e4dc; --dim:#a9a9a9; --white:#f5f1ea; --ff-head:'Playfair Display',Georgia,serif; --ff-body:'DM Sans',system-ui,sans-serif; }
+html { scroll-behavior: smooth; }
+body { background:#0b0b0b; color:var(--text); font-family:var(--ff-body); line-height:1.7; overflow-x:hidden; }
+a { color: inherit; text-decoration: none; }
+img { display:block; max-width:100%; }
+.container { max-width:1200px; margin:0 auto; padding:0 2rem; }
+nav { height:76px; display:flex; align-items:center; border-bottom:1px solid rgba(255,255,255,.06); background:rgba(8,8,8,.92); position:sticky; top:0; z-index:10; backdrop-filter:blur(18px); }
+.nav-inner { width:100%; max-width:1200px; margin:0 auto; padding:0 2rem; display:flex; align-items:center; justify-content:space-between; }
+.logo { font-family:var(--ff-head); font-weight:700; font-size:1.35rem; } .logo span { color:var(--gold); }
+.nav-links { display:flex; gap:1.5rem; align-items:center; list-style:none; color:var(--dim); font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; }
+.nav-links a:hover { color:var(--gold); }
+.hero { padding:6rem 0 4rem; background:radial-gradient(circle at 70% 20%, rgba(201,169,110,.12), transparent 35%); }
+.hero-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(360px,.65fr); gap:4rem; align-items:end; }
+.eyebrow { color:var(--gold); letter-spacing:.18em; text-transform:uppercase; font-size:.72rem; font-weight:700; margin-bottom:1.3rem; }
+h1 { font-size:clamp(3.2rem,7vw,6rem); line-height:1.04; color:var(--white); font-weight:900; letter-spacing:0; }
+.hero p { margin-top:1.6rem; max-width:660px; color:var(--dim); font-size:1.25rem; }
+.stat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+.stat { min-height:150px; border:1px solid rgba(255,255,255,.08); border-radius:20px; background:rgba(18,19,20,.9); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.stat strong { color:var(--orange); font-size:3.4rem; line-height:1; font-weight:900; } .stat span { color:var(--dim); margin-top:.8rem; }
+.episodes { padding:3rem 0 7rem; }
+.episodes-head { display:flex; justify-content:space-between; gap:2rem; align-items:end; margin-bottom:1.5rem; }
+.episodes-head h2 { color:var(--white); font-size:clamp(2rem,4vw,3rem); }
+.episodes-head p { color:var(--dim); max-width:460px; }
+.episode-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08); border-radius:22px; overflow:hidden; }
+.episode-card { background:var(--dark2); display:flex; flex-direction:column; transition:background .25s, transform .25s; }
+.episode-card:hover { background:#202020; transform:translateY(-3px); }
+.episode-thumb { position:relative; aspect-ratio:16/9; background:#222; overflow:hidden; }
+.episode-thumb img { width:100%; height:100%; object-fit:cover; transition:transform .45s, opacity .25s; }
+.episode-card:hover img { transform:scale(1.04); opacity:.86; }
+.play { position:absolute; inset:0; margin:auto; width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--orange); color:#050505; font-weight:900; padding-left:4px; box-shadow:0 18px 50px rgba(0,0,0,.45); }
+.episode-info { padding:1.35rem; }
+.episode-kicker { color:var(--gold); letter-spacing:.16em; text-transform:uppercase; font-size:.68rem; font-weight:700; margin-bottom:.75rem; }
+.episode-info h3 { color:var(--white); font-size:1.08rem; margin-bottom:.55rem; }
+.episode-info p { color:var(--dim); font-size:.84rem; }
+footer { border-top:1px solid rgba(255,255,255,.06); padding:2rem; color:var(--dim); text-align:center; }
+@media (max-width:900px) { .hero-grid { grid-template-columns:1fr; } .episode-grid { grid-template-columns:1fr; } .stat-grid { grid-template-columns:repeat(2,1fr); } .nav-links { gap:1rem; font-size:.72rem; } }
+@media (max-width:600px) { .container,.nav-inner { padding:0 1.2rem; } .hero { padding-top:4rem; } .stat-grid { grid-template-columns:1fr; } .episodes-head { display:block; } h1 { font-size:2.8rem; } }
+
+.domain-bot-toggle{position:fixed;right:1.75rem;bottom:1.75rem;z-index:1101;width:64px;height:64px;border:0;border-radius:50%;background:var(--gold);color:#080808;box-shadow:0 18px 45px rgba(201,169,110,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .25s,box-shadow .25s}.domain-bot-toggle:hover{transform:translateY(-4px);box-shadow:0 24px 60px rgba(201,169,110,.45)}.domain-bot-toggle svg{width:30px;height:30px;stroke-width:2.8}.domain-bot-toggle.open svg:first-child{display:none}.domain-bot-toggle:not(.open) svg:last-child{display:none}.domain-bot{position:fixed;right:1.75rem;bottom:6.5rem;z-index:1100;width:min(440px,calc(100vw - 2rem));height:min(680px,calc(100vh - 8rem));background:#f8f7f4;color:#111;border:1px solid rgba(255,255,255,.7);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.45);overflow:hidden;display:none;flex-direction:column}.domain-bot.open{display:flex}.domain-bot-header{padding:24px 26px 18px;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(255,255,255,.78);border-bottom:1px solid rgba(0,0,0,.06)}.domain-bot-person{display:flex;align-items:center;gap:12px;min-width:0}.domain-bot-avatar-wrap{position:relative;width:44px;height:44px;flex:0 0 auto}.domain-bot-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top center;background:#d9d9d9}.domain-bot-status{position:absolute;right:0;bottom:1px;width:12px;height:12px;border-radius:50%;background:#28b56b;border:2px solid #fff}.domain-bot-title{font-size:1.22rem;line-height:1.15;font-weight:800;color:#111;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.domain-bot-subtitle{margin-top:3px;color:#777;font-size:.78rem}.domain-bot-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}.domain-bot-icon{width:42px;height:42px;border:0;border-radius:50%;color:#60605b;background:#ecebe8;display:flex;align-items:center;justify-content:center;cursor:pointer}.domain-bot-icon:hover{background:#deddd9;color:#111}.domain-bot-icon svg{width:21px;height:21px}.domain-bot-messages{flex:1;overflow-y:auto;padding:22px 22px 16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}.domain-bot-messages,.domain-bot-quick{scrollbar-color:var(--gold) rgba(0,0,0,.08);scrollbar-width:thin}.domain-bot-messages::-webkit-scrollbar,.domain-bot-quick::-webkit-scrollbar{width:8px;height:6px}.domain-bot-messages::-webkit-scrollbar-track,.domain-bot-quick::-webkit-scrollbar-track{background:rgba(0,0,0,.08);border-radius:999px}.domain-bot-messages::-webkit-scrollbar-thumb,.domain-bot-quick::-webkit-scrollbar-thumb{background:var(--gold);border-radius:999px}.domain-bot-messages::-webkit-scrollbar-thumb:hover,.domain-bot-quick::-webkit-scrollbar-thumb:hover{background:#a9833f}.domain-bot-message{max-width:86%;border-radius:24px;padding:14px 18px;font-size:.97rem;line-height:1.5;color:#111}.domain-bot-message.bot{align-self:flex-start;background:#e8e7e4;border-bottom-left-radius:8px}.domain-bot-message.user{align-self:flex-end;background:#666760;color:#fff;border-bottom-right-radius:8px}.domain-bot-message a{color:#8d6400;font-weight:800}.domain-bot-quick{padding:0 22px 14px;display:flex;gap:8px;overflow-x:auto}.domain-bot-chip{flex:0 0 auto;border:1px solid rgba(0,0,0,.08);border-radius:999px;background:#fff;color:#222;padding:9px 13px;font-size:.84rem;font-weight:700;cursor:pointer}.domain-bot-chip:hover{background:#f4ead7;border-color:rgba(201,169,110,.6)}.domain-bot-form{padding:14px;background:rgba(255,255,255,.92);border-top:1px solid rgba(0,0,0,.06);display:flex;align-items:center;gap:10px}.domain-bot-input{flex:1;min-width:0;height:50px;border:1px solid rgba(0,0,0,.12);border-radius:999px;padding:0 18px;font-family:var(--ff-body);font-size:.95rem;outline:none;color:#111;background:#fff}.domain-bot-input:focus{border-color:rgba(201,169,110,.9);box-shadow:0 0 0 4px rgba(201,169,110,.14)}.domain-bot-send{width:46px;height:46px;border:0;border-radius:50%;background:var(--gold);color:#111;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 auto}.domain-bot-send svg{width:20px;height:20px;stroke-width:3}@media(max-width:600px){.domain-bot{right:.75rem;left:.75rem;bottom:5.8rem;width:auto;height:min(620px,calc(100vh - 7rem));border-radius:24px}.domain-bot-toggle{width:58px;height:58px;right:1rem;bottom:1rem}.domain-bot-header{padding:20px 18px 14px}.domain-bot-title{font-size:1rem}.domain-bot-icon{width:38px;height:38px}.domain-bot-messages{padding:18px 16px 14px}.domain-bot-message{max-width:92%;font-size:.93rem}.domain-bot-quick{padding:0 16px 12px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a class="logo" href="nikeelsite.html">Nikeelu<span>.</span></a><ul class="nav-links"><li><a href="nikeelsite.html#about">My Story</a></li><li><a href="nikeelsite.html#services">Services</a></li><li><a href="videos.html">Videos</a></li><li><a href="nikeelsite.html#cta">Book Appointment</a></li></ul></div></nav>
+<header class="hero"><div class="container"><div class="hero-grid"><div><div class="eyebrow">Complete Video Library</div><h1>Ready to Start Your AI Journey?</h1><p>Watch the full series of conversations, lessons, and practical insights on AI, digital skills, entrepreneurship, and future-ready growth.</p></div><div class="stat-grid"><div class="stat"><strong>15</strong><span>Episodes</span></div><div class="stat"><strong>Free</strong><span>To Watch</span></div><div class="stat"><strong>100%</strong><span>Practical</span></div><div class="stat"><strong>10K+</strong><span>Learners Inspired</span></div></div></div></div></header>
+<main class="episodes"><div class="container"><div class="episodes-head"><h2>All Episodes</h2><p>Choose any episode and continue learning directly on YouTube.</p></div><div class="episode-grid">
+      <a class="episode-card" href="https://youtu.be/qy5RBJe8r5g?si=BpAIxr-eBtkATuVe" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/qy5RBJe8r5g/hqdefault.jpg" alt="AI Digital Coach YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 01</div>
+          <h3>AI Digital Coach</h3>
+          <p>Building confidence with AI and practical digital skills.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/GUdXmFcXspw?si=lMMTxJTD7ijtHtDi" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/GUdXmFcXspw/hqdefault.jpg" alt="Telugu AI Bootcamp YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 02</div>
+          <h3>Telugu AI Bootcamp</h3>
+          <p>Learning AI in Telugu with simple steps and real tasks.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/Z1UfXB_yyzI?si=3G5DJehet7Yzura0" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/Z1UfXB_yyzI/hqdefault.jpg" alt="100+ AI Tools YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 03</div>
+          <h3>100+ AI Tools</h3>
+          <p>A practical tour of tools for productivity and creativity.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/rCSW8z30tBU?si=mE9xKu7pEbq7qXW3" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/rCSW8z30tBU/hqdefault.jpg" alt="Digital Business YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 04</div>
+          <h3>Digital Business</h3>
+          <p>How digital systems help small businesses grow smarter.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/NwrYg5MZ4H4?si=6764roILw-nUPhKc" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/NwrYg5MZ4H4/hqdefault.jpg" alt="Automation YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 05</div>
+          <h3>Automation</h3>
+          <p>Using AI workflows to save time and scale faster.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/PQgkBOApUbA?si=fSKpP09tME8IkXQC" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/PQgkBOApUbA/hqdefault.jpg" alt="Freelancing With AI YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 06</div>
+          <h3>Freelancing With AI</h3>
+          <p>Turning useful AI skills into services and income.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/-1mKNsi3JHY?si=Gqg9WekskQf3crgR" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/-1mKNsi3JHY/hqdefault.jpg" alt="Startup Mentorship YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 07</div>
+          <h3>Startup Mentorship</h3>
+          <p>Guidance for founders moving from idea to execution.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/HYaRltskNgU?si=Nzxd-eZp-3CmR0Ob" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/HYaRltskNgU/hqdefault.jpg" alt="Content Creation YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 08</div>
+          <h3>Content Creation</h3>
+          <p>Creating videos, posts, and campaigns with AI support.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/e3V1kCin8M0?si=6-U-SDx3Bo990dOc" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/e3V1kCin8M0/hqdefault.jpg" alt="Social Media Growth YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 09</div>
+          <h3>Social Media Growth</h3>
+          <p>Building visibility, trust, and reach through digital platforms.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/_c64IHtv3Xk?si=6Jywt3POJxGn1L6L" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/_c64IHtv3Xk/hqdefault.jpg" alt="AI For Students YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 10</div>
+          <h3>AI For Students</h3>
+          <p>Helping students learn faster and prepare for the future.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/-X42jIWK1OE?si=23xy6HpPxTLBX3r-" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/-X42jIWK1OE/hqdefault.jpg" alt="Business Leads YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 11</div>
+          <h3>Business Leads</h3>
+          <p>Using digital marketing and AI to attract better prospects.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/b0ySor1pkb0?si=mudU-Pb17obdaZtt" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/b0ySor1pkb0/hqdefault.jpg" alt="Future Skills YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 12</div>
+          <h3>Future Skills</h3>
+          <p>The mindsets and tools needed for the digital era.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/NP8jK-zu28s?si=NfsZHUrfdmC0kbo_" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/NP8jK-zu28s/hqdefault.jpg" alt="Digital Villages YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 13</div>
+          <h3>Digital Villages</h3>
+          <p>Bringing digital opportunity to rural talent and communities.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/NUBUntzaklA?si=BJlvJOX1SMuKapl4" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/NUBUntzaklA/hqdefault.jpg" alt="Public Speaking YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 14</div>
+          <h3>Public Speaking</h3>
+          <p>Sharing ideas that inspire people to take action.</p>
+        </div>
+      </a>
+      <a class="episode-card" href="https://youtu.be/kEh1xjtFV7k?si=pdq9MprPjjHuWAUz" target="_blank" rel="noopener">
+        <div class="episode-thumb">
+          <img src="https://i.ytimg.com/vi/kEh1xjtFV7k/hqdefault.jpg" alt="AI Transformation YouTube thumbnail">
+          <span class="play">?</span>
+        </div>
+        <div class="episode-info">
+          <div class="episode-kicker">Episode 15</div>
+          <h3>AI Transformation</h3>
+          <p>A movement toward confidence, opportunity, and impact.</p>
+        </div>
+      </a>
+</div></div></main>
+
+<div class="domain-bot" id="domainBot" aria-live="polite"><div class="domain-bot-header"><div class="domain-bot-person"><div class="domain-bot-avatar-wrap"><img src="ok.png" class="domain-bot-avatar" alt="Nikeelu Gunda"><span class="domain-bot-status"></span></div><div><div class="domain-bot-title">Nikeelu Gunda</div><div class="domain-bot-subtitle">AI and digital growth assistant</div></div></div><div class="domain-bot-actions"><a class="domain-bot-icon" href="mailto:Nikeelugunda@gmail.com" aria-label="Email Nikeelu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></a><button class="domain-bot-icon" id="domainBotClose" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div></div><div class="domain-bot-messages" id="domainBotMessages"><div class="domain-bot-message bot">How can I help you?</div><div class="domain-bot-message bot">I can guide you through Nikeelu's story, Telugu AI Bootcamp, videos, services, initiatives, and how to learn from him.</div></div><div class="domain-bot-quick" aria-label="Quick chat topics"><button class="domain-bot-chip" type="button" data-bot-question="Who are you?">Who are you?</button><button class="domain-bot-chip" type="button" data-bot-question="Tell me about Telugu AI Bootcamp">Telugu AI Bootcamp</button><button class="domain-bot-chip" type="button" data-bot-question="Show me the videos">Videos</button><button class="domain-bot-chip" type="button" data-bot-question="What services do you offer?">Services</button><button class="domain-bot-chip" type="button" data-bot-question="How can I learn from you?">Learn from me</button></div><form class="domain-bot-form" id="domainBotForm"><input class="domain-bot-input" id="domainBotInput" type="text" autocomplete="off" placeholder="Ask about AI training, services, videos..."><button class="domain-bot-send" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></form></div><button class="domain-bot-toggle" id="domainBotToggle" type="button" aria-label="Open Nikeelu assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m6 9 6 6 6-6"/></svg></button>
+<footer>Copyright ? 2026 Nikeelu Gunda. All rights reserved.</footer>
+
+<script>
+const domainBot = document.getElementById('domainBot');
+const domainBotToggle = document.getElementById('domainBotToggle');
+const domainBotClose = document.getElementById('domainBotClose');
+const domainBotMessages = document.getElementById('domainBotMessages');
+const domainBotForm = document.getElementById('domainBotForm');
+const domainBotInput = document.getElementById('domainBotInput');
+const domainBotApiUrl = '/api/chat';
+
+function setDomainBotOpen(isOpen) {
+  domainBot.classList.toggle('open', isOpen);
+  domainBotToggle.classList.toggle('open', isOpen);
+  domainBotToggle.setAttribute('aria-label', isOpen ? 'Close Nikeelu assistant' : 'Open Nikeelu assistant');
+  if (isOpen) setTimeout(() => domainBotInput.focus(), 80);
+}
+
+function addDomainBotMessage(text, type, asHtml = false) {
+  const bubble = document.createElement('div');
+  bubble.className = 'domain-bot-message ' + type;
+  if (asHtml) bubble.innerHTML = text;
+  else bubble.textContent = text;
+  domainBotMessages.appendChild(bubble);
+  domainBotMessages.scrollTop = domainBotMessages.scrollHeight;
+}
+
+function domainBotReply(question) {
+  const q = question.toLowerCase();
+  if (/^(hi|hello|hey|namaste|start)/.test(q)) return 'Hey! Good to connect with you. Ask me about AI training, Telugu AI Bootcamp, videos, services, initiatives, or how you can learn from me.';
+  if (q.includes('who') || q.includes('story') || q.includes('about') || q.includes('nikeelu') || q.includes('nikhil')) return 'I am Nikeelu Gunda, a digital coach and community builder on a mission to help 100,000+ Telugu people learn AI in Telugu and use digital skills to create better opportunities.';
+  if (q.includes('bootcamp') || q.includes('telugu') || q.includes('ai training') || q.includes('course')) return 'Telugu AI Bootcamp is built to make AI simple in Telugu. It helps learners understand tools, prompts, workflows, content creation, automation, and real digital use cases without feeling overwhelmed.';
+  if (q.includes('service') || q.includes('offer') || q.includes('mentor') || q.includes('coaching') || q.includes('learn from')) return 'Nikeelu offers AI and digital coaching, Telugu AI learning programs, student and youth mentoring, digital business guidance, startup support, workshops, and community-focused digital empowerment programs.';
+  if (q.includes('video') || q.includes('episode') || q.includes('youtube') || q.includes('watch')) return 'You are already in the video library. There are 15 free episodes covering AI tools, digital business, freelancing, students, startups, and rural digital opportunity.';
+  if (q.includes('contact') || q.includes('email') || q.includes('call')) return 'You can contact Nikeelu through email at <a href="mailto:Nikeelugunda@gmail.com">Nikeelugunda@gmail.com</a>, or keep learning from the videos on this page.';
+  if (q.includes('digital village') || q.includes('rural') || q.includes('community') || q.includes('impact')) return 'The Digital Villages mission is about bringing AI awareness, digital literacy, online earning skills, and practical technology access to rural and semi-urban communities.';
+  if (q.includes('student') || q.includes('kids') || q.includes('school') || q.includes('college')) return 'For students and youth, the focus is on future-ready skills: AI tools, confidence, digital productivity, communication, creativity, and career-oriented learning.';
+  return 'I can help with Nikeelu\'s story, Telugu AI Bootcamp, AI training, videos, services, Digital Villages, student programs, or how to learn from him. Try asking one of those topics.';
+}
+
+function setDomainBotTyping(isTyping) {
+  const existing = document.getElementById('domainBotTyping');
+  if (!isTyping && existing) existing.remove();
+  if (isTyping && !existing) {
+    const bubble = document.createElement('div');
+    bubble.id = 'domainBotTyping';
+    bubble.className = 'domain-bot-message bot';
+    bubble.textContent = 'Thinking...';
+    domainBotMessages.appendChild(bubble);
+    domainBotMessages.scrollTop = domainBotMessages.scrollHeight;
+  }
+}
+
+async function getDomainBotAiReply(question) {
+  try {
+    const response = await fetch(domainBotApiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: question })
+    });
+    const data = await response.json();
+    if (!response.ok || !data.reply) throw new Error(data.error || 'No reply');
+    return data.reply;
+  } catch (error) {
+    return domainBotReply(question);
+  }
+}
+
+async function askDomainBot(question) {
+  const clean = question.trim();
+  if (!clean) return;
+  addDomainBotMessage(clean, 'user');
+  domainBotInput.value = '';
+  setDomainBotTyping(true);
+  const reply = await getDomainBotAiReply(clean);
+  setDomainBotTyping(false);
+  addDomainBotMessage(reply, 'bot', true);
+}
+
+domainBotToggle.addEventListener('click', () => setDomainBotOpen(!domainBot.classList.contains('open')));
+domainBotClose.addEventListener('click', () => setDomainBotOpen(false));
+domainBotForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  askDomainBot(domainBotInput.value);
+});
+document.querySelectorAll('[data-bot-question]').forEach((chip) => {
+  chip.addEventListener('click', () => {
+    setDomainBotOpen(true);
+    askDomainBot(chip.dataset.botQuestion || chip.textContent);
+  });
+});
+</script>
+</body>
+</html>
