@@ -1882,7 +1882,7 @@
       </div>
       <div>
         <div class="domain-bot-title">Nikeelu Gunda</div>
-        <div class="domain-bot-subtitle">AI and digital growth assistant</div>
+        <div class="domain-bot-subtitle">Telugu AI Mentor Bot</div>
       </div>
     </div>
     <div class="domain-bot-actions">
@@ -1895,14 +1895,14 @@
     </div>
   </div>
   <div class="domain-bot-messages" id="domainBotMessages">
-    <div class="domain-bot-message bot">How can I help you?</div>
-    <div class="domain-bot-message bot">I can guide you through Nikeelu's story, Telugu AI Bootcamp, videos, services, initiatives, and how to learn from him.</div>
+    <div class="domain-bot-message bot">Before we start, should I reply in Telugu or English?</div>
+    <div class="domain-bot-message bot">I can help with AI basics, tools, careers, business ideas, Telugu AI learning, Nikeelu's videos, and practical next steps.</div>
   </div>
   <div class="domain-bot-quick" aria-label="Quick chat topics">
-    <button class="domain-bot-chip" type="button" data-bot-question="Who are you?">Who are you?</button>
-    <button class="domain-bot-chip" type="button" data-bot-question="Tell me about Telugu AI Bootcamp">Telugu AI Bootcamp</button>
+    <button class="domain-bot-chip" type="button" data-bot-question="Reply in Telugu">Telugu</button>
+    <button class="domain-bot-chip" type="button" data-bot-question="Reply in English">English</button>
+    <button class="domain-bot-chip" type="button" data-bot-question="How can I start learning AI?">Start AI</button>
     <button class="domain-bot-chip" type="button" data-bot-question="Show me the videos">Videos</button>
-    <button class="domain-bot-chip" type="button" data-bot-question="What services do you offer?">Services</button>
     <button class="domain-bot-chip" type="button" data-bot-question="How can I learn from you?">Learn from me</button>
   </div>
   <form class="domain-bot-form" id="domainBotForm">
@@ -1998,7 +1998,13 @@
   function domainBotReply(question) {
     const q = question.toLowerCase();
     if (/^(hi|hello|hey|namaste|start)/.test(q)) {
-      return 'Hey! Good to connect with you. Ask me about AI training, Telugu AI Bootcamp, videos, services, initiatives, or how you can learn from me.';
+      return 'Before we start, should I reply in Telugu or English?';
+    }
+    if (q.includes('telugu')) {
+      return 'Sure. I will reply in Telugu. Mee question adagandi - AI basics, tools, videos, career, business, or Telugu AI Bootcamp gurinchi help chestha.';
+    }
+    if (q.includes('english')) {
+      return 'Sure. I will reply in English. Ask me about AI basics, tools, careers, business use cases, Nikeelu videos, or Telugu AI Bootcamp.';
     }
     if (q.includes('who') || q.includes('story') || q.includes('about') || q.includes('nikeelu') || q.includes('nikhil')) {
       return 'I am Nikeelu Gunda, a digital coach and community builder on a mission to help 100,000+ Telugu people learn AI in Telugu and use digital skills to create better opportunities.';
@@ -2021,7 +2027,7 @@
     if (q.includes('student') || q.includes('kids') || q.includes('school') || q.includes('college')) {
       return 'For students and youth, the focus is on future-ready skills: AI tools, confidence, digital productivity, communication, creativity, and career-oriented learning.';
     }
-    return 'I can help with Nikeelu\'s story, Telugu AI Bootcamp, AI training, videos, services, Digital Villages, student programs, or how to learn from him. Try asking one of those topics.';
+    return 'I can help with AI basics, AI tools, careers, business ideas, Telugu AI Bootcamp, Nikeelu videos, Digital Villages, or how to learn from him. Telugu or English lo reply kavala?';
   }
 
   const domainBotApiUrl = '/api/chat';
