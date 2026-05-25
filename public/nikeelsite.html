@@ -1896,7 +1896,7 @@
   </div>
   <div class="domain-bot-messages" id="domainBotMessages">
     <div class="domain-bot-message bot">Before we start, should I reply in Telugu or English?</div>
-    <div class="domain-bot-message bot">I can help with AI basics, tools, careers, business ideas, Telugu AI learning, Nikeelu's videos, and practical next steps.</div>
+    <div class="domain-bot-message bot">After selecting a language, ask me about Nikeelu Gunda, AI, computers, Telugu AI Bootcamp, videos, careers, or business ideas.</div>
   </div>
   <div class="domain-bot-quick" aria-label="Quick chat topics">
     <button class="domain-bot-chip" type="button" data-bot-question="Reply in Telugu">Telugu</button>
@@ -1978,6 +1978,9 @@
   const domainBotMessages = document.getElementById('domainBotMessages');
   const domainBotForm = document.getElementById('domainBotForm');
   const domainBotInput = document.getElementById('domainBotInput');
+  const domainBotApiUrl = '/api/chat';
+  const domainBotLanguageKey = 'nikeeluBotLanguage';
+  let domainBotLanguage = localStorage.getItem(domainBotLanguageKey) || '';
 
   function setDomainBotOpen(isOpen) {
     domainBot.classList.toggle('open', isOpen);
@@ -1995,42 +1998,44 @@
     domainBotMessages.scrollTop = domainBotMessages.scrollHeight;
   }
 
-  function domainBotReply(question) {
-    const q = question.toLowerCase();
-    if (/^(hi|hello|hey|namaste|start)/.test(q)) {
-      return 'Before we start, should I reply in Telugu or English?';
-    }
-    if (q.includes('telugu')) {
-      return 'Sure. I will reply in Telugu. Mee question adagandi - AI basics, tools, videos, career, business, or Telugu AI Bootcamp gurinchi help chestha.';
-    }
-    if (q.includes('english')) {
-      return 'Sure. I will reply in English. Ask me about AI basics, tools, careers, business use cases, Nikeelu videos, or Telugu AI Bootcamp.';
-    }
-    if (q.includes('who') || q.includes('story') || q.includes('about') || q.includes('nikeelu') || q.includes('nikhil')) {
-      return 'I am Nikeelu Gunda, a digital coach and community builder on a mission to help 100,000+ Telugu people learn AI in Telugu and use digital skills to create better opportunities.';
-    }
-    if (q.includes('bootcamp') || q.includes('telugu') || q.includes('ai training') || q.includes('course')) {
-      return 'Telugu AI Bootcamp is built to make AI simple in Telugu. It helps learners understand tools, prompts, workflows, content creation, automation, and real digital use cases without feeling overwhelmed.';
-    }
-    if (q.includes('service') || q.includes('offer') || q.includes('mentor') || q.includes('coaching') || q.includes('learn from')) {
-      return 'Nikeelu offers AI and digital coaching, Telugu AI learning programs, student and youth mentoring, digital business guidance, startup support, workshops, and community-focused digital empowerment programs.';
-    }
-    if (q.includes('video') || q.includes('episode') || q.includes('youtube') || q.includes('watch')) {
-      return 'There are 15 free video episodes covering AI tools, digital business, freelancing, content creation, student skills, startups, and rural digital opportunity. <a href="videos.html">Open the full video library</a>.';
-    }
-    if (q.includes('contact') || q.includes('email') || q.includes('call')) {
-      return 'You can contact Nikeelu through email at <a href="mailto:Nikeelugunda@gmail.com">Nikeelugunda@gmail.com</a>, or continue learning here: <a href="videos.html">Watch the videos</a>.';
-    }
-    if (q.includes('digital village') || q.includes('rural') || q.includes('community') || q.includes('impact')) {
-      return 'The Digital Villages mission is about bringing AI awareness, digital literacy, online earning skills, and practical technology access to rural and semi-urban communities.';
-    }
-    if (q.includes('student') || q.includes('kids') || q.includes('school') || q.includes('college')) {
-      return 'For students and youth, the focus is on future-ready skills: AI tools, confidence, digital productivity, communication, creativity, and career-oriented learning.';
-    }
-    return 'I can help with AI basics, AI tools, careers, business ideas, Telugu AI Bootcamp, Nikeelu videos, Digital Villages, or how to learn from him. Telugu or English lo reply kavala?';
+  function detectLanguageChoice(question) {
+    const q = question.toLowerCase().trim();
+    if (q === 'telugu' || q === 'reply in telugu' || q.includes('change to telugu') || q.includes('telugu lo reply') || q.includes('telugu lo cheppu')) return 'Telugu';
+    if (q === 'english' || q === 'reply in english' || q.includes('change to english') || q.includes('english lo reply')) return 'English';
+    return '';
   }
 
-  const domainBotApiUrl = '/api/chat';
+  function languageSetReply(language) {
+    if (language === 'Telugu') {
+      return 'Sure. I will reply in Telugu from now. Mee questions AI, computers, Nikeelu Gunda, Telugu AI Bootcamp, videos, careers, or business gurinchi adagandi.';
+    }
+    return 'Sure. I will reply in English from now. Ask me about AI, computers, Nikeelu Gunda, Telugu AI Bootcamp, videos, careers, or business.';
+  }
+
+  function fallbackDomainBotReply(question) {
+    const q = question.toLowerCase();
+    const telugu = domainBotLanguage === 'Telugu';
+    if (!domainBotLanguage) return 'Before we start, should I reply in Telugu or English?';
+    if (q.includes('change language') || q.includes('language')) return 'Sure. Please choose Telugu or English.';
+    if (q.includes('who') || q.includes('story') || q.includes('about') || q.includes('nikeelu') || q.includes('nikhil')) {
+      return telugu
+        ? 'Nikeelu Gunda oka digital coach, AI trainer, entrepreneur, speaker, mentor, community builder. Ayana mission 100,000+ Telugu people ki AI ni Telugu lo practical ga nerpinchadam.'
+        : 'Nikeelu Gunda is a digital coach, AI trainer, entrepreneur, speaker, mentor, and community builder. His mission is to help 100,000+ Telugu people learn AI in Telugu and use it practically.';
+    }
+    if (q.includes('computer') || q.includes('ai') || q.includes('machine learning') || q.includes('coding') || q.includes('software')) {
+      return telugu
+        ? 'Computer ante data ni process chese machine. AI ante computer ki human-like thinking tasks cheyyadam nerpinche technology. Meeru basics, tools, coding, ML, prompts, automation gurinchi adagachu.'
+        : 'Computers process data and run instructions. AI helps computers perform human-like tasks such as understanding language, generating content, recognizing patterns, and automating work. You can ask me about basics, tools, coding, ML, prompts, or automation.';
+    }
+    if (q.includes('video') || q.includes('episode') || q.includes('youtube') || q.includes('watch') || q.includes('learn from')) {
+      return telugu
+        ? 'Nikeelu videos page lo 15 free episodes unnayi. AI tools, Telugu AI Bootcamp, freelancing, digital business, students, startups, Digital Villages topics cover chestayi. <a href="videos.html">Videos open cheyyandi</a>.'
+        : 'Nikeelu has 15 free video episodes on AI tools, Telugu AI Bootcamp, freelancing, digital business, students, startups, and Digital Villages. <a href="videos.html">Open the videos</a>.';
+    }
+    return telugu
+      ? 'Nenu AI, computers, Telugu AI Bootcamp, Nikeelu Gunda, videos, careers, business ideas, digital skills gurinchi help cheyyagalanu. Mee question adagandi.'
+      : 'I can help with AI, computers, Telugu AI Bootcamp, Nikeelu Gunda, videos, careers, business ideas, and digital skills. Ask me your question.';
+  }
 
   function setDomainBotTyping(isTyping) {
     const existing = document.getElementById('domainBotTyping');
@@ -2050,13 +2055,13 @@
       const response = await fetch(domainBotApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: question })
+        body: JSON.stringify({ message: question, language: domainBotLanguage || 'English' })
       });
       const data = await response.json();
       if (!response.ok || !data.reply) throw new Error(data.error || 'No reply');
       return data.reply;
     } catch (error) {
-      return domainBotReply(question);
+      return fallbackDomainBotReply(question);
     }
   }
 
@@ -2065,6 +2070,20 @@
     if (!clean) return;
     addDomainBotMessage(clean, 'user');
     domainBotInput.value = '';
+
+    const chosenLanguage = detectLanguageChoice(clean);
+    if (chosenLanguage) {
+      domainBotLanguage = chosenLanguage;
+      localStorage.setItem(domainBotLanguageKey, chosenLanguage);
+      addDomainBotMessage(languageSetReply(chosenLanguage), 'bot');
+      return;
+    }
+
+    if (!domainBotLanguage) {
+      addDomainBotMessage('Before we start, should I reply in Telugu or English?', 'bot');
+      return;
+    }
+
     setDomainBotTyping(true);
     const reply = await getDomainBotAiReply(clean);
     setDomainBotTyping(false);
